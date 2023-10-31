@@ -79,9 +79,9 @@ websites.forEach((website, index) => {
                                 console.error(err);
                             })
                             .pipe(fs.createWriteStream(path.join(staticpath, fileName)))
-                            .on('close', () => {
-                                console.log('Image downloaded successfully.');
-                            });
+                            // .on('close', () => {
+                                // console.log('Image downloaded successfully.');
+                            // });
 
                         // Define a route to fetch and serve the image
                         app.get(`/${index}`, async (req, res) => {
